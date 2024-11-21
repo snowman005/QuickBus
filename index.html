@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principala</title>
+    <link rel="stylesheet" href="style.css">
+    <script 
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
+      <script>
+      (function(){
+        emailjs.init({
+          publicKey: "SCucFs-wPBRydzaDO",
+        });
+      })();
+</script>
+  </head>
+  <body>
+    <header>
+      <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+      <ul>
+          <li><a href="index.html">ACASĂ</a></li>
+          <li><a href="pagini/modele.html">TRANSPORT</a></li>
+          <li><a href="pagini/destinatii.html">DESTINATII</a></li>
+          <li><a href="pagini/about.html">DESPRE NOI</a></li>
+      </ul>
+  </header>
+    
+    <section class="primul-banner">
+      <h1 class="titlu">Quick<b class="title-color">Bus</b></h1>
+      <p class="banner-desc">Solutia <b style="color: #5ea535;">numărul 1</b> pentru transport ocazional. Rapid. Ieftin. Sigur. QuickBus.</p>
+    </section>
+    
+    <div class="banner">
+      <h2>Călătorește cu noi!</h2>
+      <form action="#" id="reservation-form">
+        <div class="dropdown">
+          <label for="type">Transport:</label>
+            <select id="type" name="type">
+              <option value="microbus">Microbus</option>
+              <option value="bus">Bus</option>
+              <option value="car">Mașină</option>
+            </select>
+          </div>
+          <div class="dropdown">
+            <label for="starting-point">Punct de plecare:</label>
+            <select id="starting-point" name="starting-point">
+              <option value="germany">Germania</option>
+              <option value="italy">Italia</option>
+              <option value="switzerland">Elveția</option>
+              <option value="romania">România</option>
+              <option value="spain">Spania</option>
+              <option value="denmark">Danemarca</option>
+            </select>
+          </div>
+          <div class="dropdown">
+            <label for="destination">Destinație:</label>
+            <select id="destination" name="destination">
+              <option value="italy">Italia</option>
+              <option value="germany">Germania</option>
+              <option value="switzerland">Elveția</option>
+              <option value="romania">România</option>
+              <option value="spain">Spania</option>
+              <option value="denmark">Danemarca</option>
+            </select>
+          </div>
+          <div class="date-picker"><label for="date">Data pornirii:</label><br>
+            <input 
+            type="date" 
+            id="date" 
+            name="departure-date" 
+            min="1970-01-01" 
+            value=""
+            >
+            <script>
+              const today = new Date().toISOString().split('T')[0];
+              const dateInput = document.getElementById('date');
+              dateInput.min = today;
+              dateInput.value = today;
+            </script> 
+          </div>
+          <div class="text-area"><label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"  size="25" required placeholder="John Doe">
+          </div>
+        <div class="text-area"><label for="email">Email:</label><br>
+          <input type="email" id="email" name="email"  size="25" required placeholder="example@example.com">
+        </div>
+        <div class="text-area">
+          <label for="tel">Telefon:</label><br>
+          <div style="display: grid; grid-template-columns:50% 50%; align-items: center;">
+            <div class="dropdown" style="margin: 0">
+              <select id="tel2" name="country-code" required>
+                <option value="" disabled selected>Select country code</option>
+                <option value="+39">+39 (Italia)</option>
+                <option value="+49">+49 (Germania)</option>
+                <option value="+41">+41 (Elveția)</option>
+                <option value="+40">+40 (România)</option>
+                <option value="+34">+34 (Spania)</option>
+                <option value="+45">+45 (Danemarca)</option>
+              </select>
+            </div>
+              <input 
+              type="tel" 
+              id="tel" 
+              name="tel" 
+              size="15" 
+              placeholder="1234567890" 
+              required 
+              >
+          </div>
+        </div>
+        <div class="dropdown">
+          <label for="discount">Cod promoțional:</label>
+            <select id="discount" name="discount">
+              <option value="yes">Da</option>
+              <option value="no">Nu</option>
+            </select>
+          </div>
+          <button type="submit" class="submit">Rezervează</button>
+        </form>
+        <h5>Fiecare bus are cursă zilnică spre toate destinațiile oferite de QuickBus la ora 22:00.</h5>
+        <h5>Dorești mai multe detalii? Navighează paginile website-ului!</h5>
+      </div>
+
+    <div class="descriere" id="start">
+        <div class="left">
+        <h3>Scurtă descriere</h3>
+        <p class="descriere-text">QuickBus este o companie de transport ocazional de top, dedicată oferirii unor servicii rapide, sigure și confortabile pentru călătoriile de scurtă și lungă durată. Fondată în 2020, QuickBus a devenit rapid un nume de încredere în industria transportului datorită flotei sale moderne de autocare, echipate cu facilități de ultimă generație, precum Wi-Fi gratuit, scaune ergonomice și sisteme de divertisment la bord.</p>
+        <a href="pagini/about.html"><p class="start-button-black">Vezi mai mult</p></a>
+      </div>
+        <div class="right">
+            <img src="images/bus-icon.png" style="height: 50vh" alt="">
+        </div>
+    </div>
+
+    <div class="produse">
+        <h3>Destinații</h3>
+        <div class="showcase">
+            <img src="images/italy.png" alt="" style="height: 20vh">
+            <img src="images/germany.png" alt="" style="height: 20vh">
+            <img src="images/swiss.png" alt="" style="height: 20vh">
+        </div>
+        <p>Indiferent de distanță, asigurăm un serviciu pe măsura așteptărilor.</p>
+        <a href="pagini/destinatii.html"><p class="start-button-black second-start-button-black" >Vezi toate destinațiile posibile</p></a>
+</div>
+
+    <div class="descriere">
+        <div class="left">
+            <img src="images/bus-icon2.png" style="height: 60vh" alt="">
+        </div>
+        <div class="right">
+            <h3>Cu ce transport pot călători?</h3>
+            <p>În dependență de necesitate, QuickBus dispune de mai multe mijloace de transport, fiecare fiind dotat pentru a asigura o călătorie plăcută.</p>    
+            <a href="pagini/modele.html"><p class="start-button-black" >Vezi detalii</p></a>
+        </div>
+    </div>
+  <footer>
+    <h2 style="color: #fff; margin: 0px; background-color: #222222">QuickBus</h2>
+    <p>Site realizat de Soltan Cristian</p>
+  </footer>
+  <script src="script.js"></script>
+
+  </body>
+</html>
