@@ -1,0 +1,40 @@
+{
+  "destinations": [
+    {
+      "country": "Italy",
+      "phoneCode": "+39",
+      "capital": "Rome",
+      "station": "Roma Termini"
+    },
+    {
+      "country": "Germany",
+      "phoneCode": "+49",
+      "capital": "Berlin",
+      "station": "Berlin Hauptbahnhof"
+    },
+    {
+      "country": "Switzerland",
+      "phoneCode": "+41",
+      "capital": "Bern",
+      "station": "Bern Hauptbahnhof"
+    },
+    {
+      "country": "Romania",
+      "phoneCode": "+40",
+      "capital": "Bucharest",
+      "station": "Gara de Nord"
+    },
+    {
+      "country": "Spain",
+      "phoneCode": "+34",
+      "capital": "Madrid",
+      "station": "Madrid Atocha"
+    },
+    {
+      "country": "Denmark",
+      "phoneCode": "+45",
+      "capital": "Copenhagen",
+      "station": "København H"
+    }
+  ]
+}

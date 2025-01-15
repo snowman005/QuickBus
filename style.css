@@ -21,7 +21,18 @@ html {
 * {
     font-family: 'Roboto', sans-serif;
 }
-
+.notification-banner {
+    position: fixed;
+    bottom: 0; /* Position at the bottom */
+    width: 100%;
+    background-color: #5ea535;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    z-index: 1000;
+    display: none; /* Initially hidden */
+}
 body {
     margin: 0;
     overflow-x: hidden;
@@ -144,10 +155,54 @@ h3 {
     background-repeat: no-repeat;
 }
 
+.theme-buttons {
+    margin: 20px;
+}
+
+.theme-button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark { background-color: black; }
+.light { background-color: white; color: black; }
+
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.content {
+    padding: 20px;
+    margin: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme .content {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.light-theme .content {
+    background-color: #f0f0f0;
+    color: #000000;
+}
 .banner-desc {
     color: #fff;
     font-size: 1.6rem;
     width: 40%;
+    padding: 10px;
 }
 
 .titlu {
