@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   const startingPointSelect = document.getElementById('starting-point');
   const destinationSelect = document.getElementById('destination');
 
-  // Function to fetch destinations data
   async function fetchDestinations() {
     try {
       const response = await fetch('destinations.json');
@@ -57,7 +56,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   }
 
-  // Function to update the dropdown options
   function updateCountryCodeOptions(destinations) {
     const defaultOption = document.createElement('option');
     defaultOption.value = "";
@@ -74,7 +72,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
   }
 
-  // Function to update the starting point and destination options
   function updateDestinationOptions(destinations) {
     destinations.forEach(dest => {
       const option = document.createElement('option');
@@ -86,12 +83,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
   }
 
-  // Fetch and update the dropdown options
   const destinations = await fetchDestinations();
   updateCountryCodeOptions(destinations);
   updateDestinationOptions(destinations);
 
-  // Save form data to localStorage on change
   formInputs.forEach(input => {
     input.addEventListener('change', () => {
       const formData = {};
@@ -102,7 +97,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
   });
 
-  // Load form data from localStorage
   const savedFormData = JSON.parse(localStorage.getItem('reservationFormData'));
   if (savedFormData) {
     formInputs.forEach(input => {
@@ -111,7 +105,6 @@ document.addEventListener("DOMContentLoaded", async function () {
       }
     });
 
-    // Set the selected option for the country code dropdown
     if (savedFormData['country-code']) {
       countryCodeSelect.value = savedFormData['country-code'];
     }
